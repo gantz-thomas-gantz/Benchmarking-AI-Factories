@@ -61,11 +61,10 @@
 \maketitle
 
 \begin{abstract}
-This project report presents ...
+This project report documents the work carried out by Team~11 as part of the EUMaster4HPC Student Challenge 2025-2026. The objective was to design and implement a modular benchmarking framework for AI workloads on MeluXina; technical design details are presented in the accompanying technical report. Here we describe the results achieved, team organisation, project timeline, and lessons learned.
 \end{abstract}
 
 \tableofcontents
-\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION 1: INTRODUCTION
@@ -78,9 +77,65 @@ Introduce the work delivered in the framework of this challenge and way you eval
 
 \section{Organisation}
 
-<Thomas>
+This section describes the team structure, project timeline, and collaboration practices adopted throughout the challenge. The phased structure of the challenge and the weekly mentoring sessions ensured that all team members remained informed of the project's status and could contribute within their areas of expertise.
 
-Give details on your work organisation, and especially organisation with your team mates (work calendar, distribution of tasks, etc)
+\subsection{Team Composition}
+
+Team~11 consisted of four members from the EUMaster4HPC programme, each bringing complementary skills and backgrounds (Table~\ref{tab:team}).
+
+\begin{table}[htbp]
+\centering
+\caption{Team~11 members and responsibilities}
+\label{tab:team}
+\begin{tabularx}{\textwidth}{@{}l l X@{}}
+\toprule
+\textbf{Member} & \textbf{Role} & \textbf{Key Contributions} \\
+\midrule
+Luca Lamperti & Lead Developer & Core framework implementation, recipe system, containerisation \\
+Thomas Gantz & Architecture \& Documentation & System architecture design, client-server prototyping, project reporting \\
+Patrick Cerka & Prototyping \& Infrastructure & Executor module prototyping, MeluXina environment setup, SLURM scripting \\
+Emmanuele Lovino & Testing \& Validation & MeluXina onboarding, runtime testing, workload validation \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The project was overseen by Dr.~Farouk Mansouri from LuxProvide, who provided strategic oversight. Regular weekly technical mentoring sessions were conducted by Mario Serrano Sanchez (LuxProvide), offering structured progress reviews and targeted technical support.
+
+Work was distributed according to individual strengths and availability, following the natural decomposition into the four modules mandated by the challenge brief (Server, Client, Monitor, Logger). The modular architecture provided a clear framework for dividing responsibilities.
+
+\subsection{Work Calendar}
+
+The challenge spanned four months (October~2025 to January~2026). Table~\ref{tab:calendar} summarises the timeline and mapping to deliverables.
+
+\begin{table}[htbp]
+\centering
+\caption{Project calendar}
+\label{tab:calendar}
+\begin{tabularx}{\textwidth}{@{}l l X@{}}
+\toprule
+\textbf{Phase} & \textbf{Period} & \textbf{Activities} \\
+\midrule
+1 - Onboarding & Oct 2025 & MeluXina access setup; first SLURM jobs (each member ran hello-world and Ollama examples); familiarisation with Apptainer, scratch storage, and GPU partitions; initial architecture design (UML diagram); GitHub repository creation with milestones and issues \\
+\addlinespace
+2 - Prototyping & Nov 2025 & Implementation of abstract base classes (\texttt{Executor}, \texttt{Monitor}, \texttt{Logger}); concrete executors (\texttt{SlurmExecutor}, \texttt{ProcessExecutor}, \texttt{ApptainerExecutor}, \texttt{WorkloadExecutor}); \texttt{BenchmarkManager} and CLI interface; first recipe definitions; iterative debugging on MeluXina \\
+\addlinespace
+3 - Evaluation & Dec 2025 & vLLM inference benchmark execution; MinIO S3 upload benchmark; Prometheus monitoring and Grafana dashboard integration; \texttt{FastAPI} datasource server; automation script for local-to-cluster workflow; performance data collection and analysis \\
+\addlinespace
+4 - Reporting & Jan 2026 & Technical and project report writing; README finalisation with demo recordings \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Collaboration Practices}
+
+The team adopted the following tools and practices for coordination:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{GitHub:} Public repository (\texttt{LucaLM02/Benchmarking-AI-Factories}) used for version control, issue tracking, and milestone management.
+    \item \textbf{Meetings:} Regular check-ins within the team to discuss progress, blockers, and upcoming tasks, complemented by the weekly mentoring sessions.
+    \item \textbf{Issue-driven workflow:} Tasks were tracked as GitHub issues aligned with the challenge phases, allowing transparent progress monitoring.
+    \item \textbf{Shared MeluXina workspace:} All team members had access to the project scratch directory on MeluXina, enabling collaborative testing and log sharing.
+\end{itemize}
 
 \section{Lessons Learned}
 
