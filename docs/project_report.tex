@@ -54,7 +54,7 @@
 \author{%
     Team 11
 }
-\date{January 2026}
+\date{24.02.2026}
 
 \begin{document}
 
@@ -167,7 +167,7 @@ The project also helped us understand what building an ``AI Factory'' really inv
 
 Another important lesson was the need for modularity and reproducibility. Early in the project we often wrote quick scripts just to test an idea or get a result. As the work progressed, it became clear that benchmarking is never a one-shot task: parameters change, experiments must be repeated, and results need to be comparable over time. This pushed us to reorganize the code into clearer components, separating execution logic, monitoring, logging, and workload definitions.
 
-Using YAML configuration files to describe experiments turned out to be especially useful. It allowed us to modify setups without rewriting code and made it easier to rerun tests in a consistent way. Automating the full pipeline—from syncing code to the cluster, to launching jobs, to collecting outputs—also reduced errors and saved time. Building the \texttt{automation\_script.sh} entry point encouraged us to think about usability and reproducibility from the perspective of someone who did not write the original code.
+Using YAML configuration files to describe experiments turned out to be especially useful. It allowed us to modify setups without rewriting code and made it easier to rerun tests in a consistent way. Automating the full pipeline (from syncing code to the cluster, to launching jobs, to collecting outputs) also reduced errors and saved time. Building the \texttt{automation\_script.sh} entry point encouraged us to think about usability and reproducibility from the perspective of someone who did not write the original code.
 
 \subsection{Working in a Group: Coordination, Communication, and Shared Ownership}
 
@@ -175,11 +175,11 @@ Collaborating as a team added another layer of learning. Each member brought dif
 
 We also had to establish practical habits: using Git consistently, documenting decisions, and dividing tasks clearly. Writing clear commit messages, reviewing each other's work, and keeping documentation updated may seem minor, but they made a big difference as the project grew. These are the kinds of practices that are easy to overlook in small assignments but become essential in larger efforts.
 
-Of course, group work was not always smooth. Waiting for access to resources, debugging issues introduced by changes, or reconciling different coding styles sometimes slowed us down. Learning to handle these moments constructively—by communicating clearly and focusing on the shared objective—was an important part of the experience.
+Of course, group work was not always smooth. Waiting for access to resources, debugging issues introduced by changes, or reconciling different coding styles sometimes slowed us down. Learning to handle these moments constructively by communicating clearly and focusing on the shared objective was an important part of the experience.
 
 \subsection{Broader Perspective on AI and HPC Convergence}
 
-Finally, the challenge gave us a clearer view of how closely AI and HPC are becoming linked. Systems designed to train, serve, and evaluate models at scale are increasingly treated as core infrastructure. Working on a concrete problem in this space made that trend tangible and showed us that performance, monitoring, and reproducibility are just as important as the models themselves.
+Finally, the challenge gave us a clearer view of how closely AI and HPC are becoming linked. Systems designed to train, serve, and evaluate models at scale are increasingly treated as core infrastructure. Working on a concrete problem in this space made that trend even clearer and showed us that performance, monitoring, and reproducibility are just as important as the models themselves.
 
 Overall, the challenge acted as an accelerator for both technical and collaborative skills. It required us to engage with real tools, think about systems rather than isolated programs, and deliver something that functions beyond the scope of a typical class project. The experience has better prepared us for complex, multi-disciplinary work in the future.
 
